@@ -16,6 +16,16 @@ Simplistic WordPress theme for documentation. A guide for your guide.
 
 Squire is a minimalistic theme that can be used for documentation or just a simple blog. By default, Squire will load all child pages into the parent page and automatically create a child page navigation to the left of the content.
 
+**Features**
+
+- Build workflow using gulp.js
+- Foundation for Sites
+- Font Awesome Pro
+- Child pages load within parent with a child page nav for documentation-style pages
+- Beaver Builder support
+- Force Login option for closing off site during development
+
+
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
