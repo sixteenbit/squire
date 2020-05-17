@@ -1,0 +1,98 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+$header-anchor-color: $glitter;
+$header-anchor-hover: $white;
+
+.site-header {
+  @include clearfix();
+  background-color: $main-nav-background;
+  overflow: auto;
+  color: $glitter;
+
+  @include breakpoint(large up) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: $main-nav-width;
+  }
+
+  a {
+    color: $header-anchor-color;
+
+    @include on-event() {
+      color: $header-anchor-hover;
+    }
+  }
+
+  .site-branding {
+    @include clearfix();
+    position: relative;
+    padding: rem-calc($global-padding);
+
+    @include breakpoint(large up) {
+      padding-top: ($global-padding * 2);
+      padding-bottom: ($global-padding * 2);
+    }
+  }
+
+  .menu-toggle,
+  .search-toggle {
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0;
+    padding: 0;
+    border-radius: 50%;
+    font-size: rem-calc(18);
+    line-height: 40px;
+    color: $glitter;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .menu-toggle {
+    margin-left: ($global-margin / 2);
+  }
+}
+
+.site-title {
+  float: left;
+  margin-bottom: 0;
+  font-size: rem-calc(18);
+  letter-spacing: rem-calc(-0.5);
+  line-height: 40px;
+  text-decoration: none;
+
+  a {
+    color: $white;
+  }
+
+  @include breakpoint(large up) {
+    font-size: rem-calc(24);
+  }
+}
+
+.site-description {
+  display: none;
+}
+
+.wp-custom-logo {
+  .site-title {
+    display: none;
+  }
+
+  .custom-logo-link {
+    position: relative;
+  }
+
+  .custom-logo {
+    max-width: 100px;
+    height: auto;
+    margin-left: $global-margin;
+  }
+}

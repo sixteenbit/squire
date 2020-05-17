@@ -1,0 +1,19 @@
+.wp-caption {
+  max-width: 100%;
+  margin-bottom: $global-margin;
+
+  img[class*="wp-image-"] {
+    display: block;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
+}
+
+.wp-caption-text {
+  text-align: center;
+}

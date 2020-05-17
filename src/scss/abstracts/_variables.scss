@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// Overwrite variables in src/scss/vendors/foundation/_settings.scss
+// -----------------------------------------------------------------------------
+
+// Utility Colors
+$highlight-text-color: #fff2a8;
+
+// Sizing
+$content-width: rem-calc(1140);
+
+// Typography
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+$header-font-family: $body-font-family;
+$body-font-color: #172b4d;
+$header-font-weight: 500;
+
+$editor-width: rem-calc(800);
+$highlight-text-color: #fff2a8;
+
+$white-smoke: #f4f5f7;
+$crayon-blue: #0065ff;
+$astronaut: #42526e;
+$navy-blue: #0052cc;
+$sea-buckthorn: #fdaa2a;
+$blue-zodiac: #172b4d;
+$glitter: #deebff;
+$cobalt: #084ca3;
+$congress-blue: #08418a;
+$oxford-blue: #091e42;
+
+// Foundation Overrides
+$primary-color: $navy-blue;
+$secondary-color: $white-smoke;
+$global-radius: rem-calc(3);
+
+$foundation-palette: (
+  primary: $navy-blue,
+  secondary: $white-smoke,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
+
+$offcanvas-exit-background: rgba($black, 0.25);
+
+// Main Navigation
+$main-nav-width: rem-calc(300);
+$main-nav-background: $cobalt;
+$main-nav-color: $glitter;
+$main-nav-hover: $congress-blue;
+
+// Child Navigation
+$child-nav-width: rem-calc(240);
+$child-nav-background: $white-smoke;
+$child-nav-color: $astronaut;
+$child-nav-hover: #eaecf0;
+
+// Live Search
+$live-search-color: $astronaut;
+$live-search-hover: #eaecf0;
+
+$button-background: $primary-color;
+$button-background-hover: scale-color($button-background, $lightness: -15%);
+
+$anchor-color: $navy-blue;
+$anchor-color-hover: $crayon-blue;
+$anchor-text-decoration: underline;

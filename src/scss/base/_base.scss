@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+::selection {
+  background: $highlight-text-color;
+}
+
+a {
+  background-color: transparent;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+mark {
+  background-color: $highlight-text-color;
+}
+
+.post-password-form {
+  [type="submit"] {
+    @include button();
+  }
+}
+

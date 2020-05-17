@@ -1,0 +1,103 @@
+$search-background: $white;
+
+.search-panel {
+  padding: $global-padding;
+  background-color: $search-background;
+
+  .admin-bar & {
+    top: 32px;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  .search-input {
+    border: 0;
+    background: none;
+    box-shadow: none;
+
+    @include breakpoint(large up) {
+      font-size: rem-calc(28);
+    }
+  }
+
+  .search-submit {
+    display: none;
+  }
+}
+
+// Live Search
+.search_results {
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  display: block;
+  //width: (map-get($offcanvas-sizes, small) - 16);
+  margin: $global-margin 0 0;
+  padding: 0;
+  background: $white;
+  overflow: auto;
+
+  @include breakpoint(large up) {
+    //width: (map-get($offcanvas-sizes, medium) - 16);
+  }
+
+  li {
+    display: block;
+    margin: 0;
+    text-align: left;
+    text-decoration: none;
+
+    a {
+      display: block;
+      margin-left: 0;
+      padding: ($global-padding / 2) $global-padding;
+      font-size: rem-calc(14);
+      color: $live-search-color;
+      text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $live-search-hover;
+    }
+  }
+
+  .post_with_thumb {
+    a {
+      float: left;
+      width: 150px;
+      margin-bottom: 5px;
+    }
+
+    .post_thumb {
+      float: left;
+      width: auto;
+      height: 48px;
+      margin: rem-calc(3 10 10 0);
+    }
+  }
+}
+
+.search_footer {
+  width: 100%;
+  margin-top: $global-margin;
+  margin-left: $global-margin;
+  padding: 0;
+
+  a {
+    @include button($background: $secondary-color, $color: $body-font-color);
+    font-size: 0.6rem;
+
+    @include on-event() {
+      color: $secondary-color;
+    }
+  }
+}
+
+#search_results_activity_indicator {
+  z-index: 999999;
+}

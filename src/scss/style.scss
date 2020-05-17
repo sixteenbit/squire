@@ -1,0 +1,54 @@
+/*!
+Theme Name: Squire
+Theme URI: https://github.com/sixteenbit/squire
+Author: Sixteenbit
+Author URI: https://sixteenbit.com
+Description: Custom theme: Squire, developed by Sixteenbit.
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: squire
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// 1. Configuration and helpers
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+// 2. Vendors
+@import 'vendors/foundation/foundation-components';
+
+// 3. Base stuff
+@import 'base/base';
+
+// 4. Layout-related sections
+@import 'layout/site';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/widgets';
+
+// 5. Components
+@import 'components/accessibility';
+@import 'components/navigation-main';
+@import 'components/navigation-child';
+@import 'components/navigation-social';
+@import 'components/alignments';
+@import 'components/captions';
+@import 'components/comments';
+@import 'components/media';
+@import 'components/search';
+@import 'components/page-navi';
+@import 'components/scroll-to-top';
+@import 'components/beaver-builder';
+@import 'components/fouc';
+@import 'components/admin-bar';
+
+// 6. Page-specific styles
+@import 'pages/home';
+@import 'pages/posts-and-pages';
+
+// 7. Themes
+

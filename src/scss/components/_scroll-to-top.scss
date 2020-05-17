@@ -1,0 +1,13 @@
+.scroll-to-top {
+  position: fixed;
+  right: $global-margin;
+  bottom: 20vh;
+  z-index: 10000;
+  opacity: 0.75;
+  visibility: hidden;
+  text-align: center;
+
+  &.active {
+    visibility: visible;
+  }
+}

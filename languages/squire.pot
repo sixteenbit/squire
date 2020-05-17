@@ -1,0 +1,303 @@
+# Copyright (C) 2020 squire
+# This file is distributed under the same license as the squire package.
+msgid ""
+msgstr ""
+"Project-Id-Version: squire\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: 404.php:16
+msgid "Oops! That page can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:20
+msgid "The page you are looking for does not exist. It may have been moved, or removed altogether. Perhaps you can return back to the site's homepage and see if you can find what you are looking for."
+msgstr ""
+
+#: 404.php:22
+msgid "Back Home"
+msgstr ""
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:39
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:33
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:66
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:30
+msgid "Copyright &copy; %s. All rights reserved."
+msgstr ""
+
+#: footer.php:35, classes/class-theme-setup.php:20
+msgid "Footer Menu"
+msgstr ""
+
+#: footer.php:57
+msgid "Scroll to top"
+msgstr ""
+
+#: header.php:25, header.php:26
+msgid "Search"
+msgstr ""
+
+#: header.php:25, searchform.php:20
+msgid "Search for:"
+msgstr ""
+
+#: header.php:55
+msgid "Main navigation toggle"
+msgstr ""
+
+#: header.php:59
+msgid "Search Form"
+msgstr ""
+
+#: header.php:64, classes/class-theme-setup.php:18
+msgid "Primary Menu"
+msgstr ""
+
+#: header.php:81
+msgid "Social Links Menu"
+msgstr ""
+
+#: index.php:29
+msgid "Search:"
+msgstr ""
+
+#: index.php:45
+msgid "We could not find any results for your search. You can give it another try through the search form below."
+msgstr ""
+
+#: index.php:36
+msgid "We found %s result for your search."
+msgid_plural "We found %s results for your search."
+msgstr[0] ""
+msgstr[1] ""
+
+#: index.php:107
+msgid "search again"
+msgstr ""
+
+#: index.php:73
+msgid "Articles"
+msgstr ""
+
+#: searchform.php:21
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: searchform.php:23
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: classes/class-bb-themer-setup.php:24
+msgid "Content area"
+msgstr ""
+
+#: classes/class-bb-themer-setup.php:32
+msgid "Footer area"
+msgstr ""
+
+#: classes/class-child-pages.php:19
+msgid "Page Navigation"
+msgstr ""
+
+#: classes/class-child-pages.php:46
+msgid "Back to top"
+msgstr ""
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#. translators: %s: Name of current post. Only visible to screen readers
+#: classes/class-child-pages.php:105, classes/class-tags.php:150
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: classes/class-customizer.php:34
+msgid "Text Color"
+msgstr ""
+
+#: classes/class-customizer.php:35
+msgid "Select the color to be used for the body text color."
+msgstr ""
+
+#: classes/class-customizer.php:57
+msgid "Sidebar Background"
+msgstr ""
+
+#: classes/class-customizer.php:58
+msgid "Select the background color to be used for the sidebar."
+msgstr ""
+
+#: classes/class-customizer.php:80
+msgid "Sidebar Color"
+msgstr ""
+
+#: classes/class-customizer.php:81
+msgid "Select the color to be used for the sidebar menu items."
+msgstr ""
+
+#: classes/class-customizer.php:103
+msgid "Anchor Color"
+msgstr ""
+
+#: classes/class-customizer.php:104
+msgid "Select the color to be used for hyperlink color."
+msgstr ""
+
+#: classes/class-customizer.php:126
+msgid "Anchor Hover Color"
+msgstr ""
+
+#: classes/class-customizer.php:127
+msgid "Select the color to be used for hyperlink hover color."
+msgstr ""
+
+#: classes/class-customizer.php:136
+msgid "Theme Options"
+msgstr ""
+
+#: classes/class-customizer.php:154
+msgid "Force Login"
+msgstr ""
+
+#: classes/class-customizer.php:155
+msgid "Make the website private until it's ready to share publicly, or keep it private for members only."
+msgstr ""
+
+#: classes/class-force-login.php:56
+msgid "You're not authorized to access this site."
+msgstr ""
+
+#: classes/class-force-login.php:56
+msgid "Error"
+msgstr ""
+
+#: classes/class-force-login.php:72
+msgid "Only authenticated users can access the REST API."
+msgstr ""
+
+#. translators: %s: post date.
+#: classes/class-tags.php:19
+msgid "%1$s ago"
+msgstr ""
+
+#. translators: %s: post date.
+#: classes/class-tags.php:25
+msgid "<time class=\"entry-date\" datetime=\"%1$s\" pubdate>Posted %2$s</time>"
+msgstr ""
+
+#: classes/class-tags.php:43
+msgid "Previous"
+msgstr ""
+
+#: classes/class-tags.php:44
+msgid "Next"
+msgstr ""
+
+#: classes/class-tags.php:92
+msgid "First"
+msgstr ""
+
+#: classes/class-tags.php:96
+msgid "previous"
+msgstr ""
+
+#: classes/class-tags.php:102
+msgid "You're on page "
+msgstr ""
+
+#: classes/class-tags.php:112
+msgid "next"
+msgstr ""
+
+#: classes/class-tags.php:117
+msgid "Last"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: classes/class-tags.php:132
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of categories.
+#: classes/class-tags.php:135
+msgid "Posted in %1$s"
+msgstr ""
+
+#. translators: used between list items, there is a space after the comma
+#: classes/class-tags.php:139
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#. translators: 1: list of tags.
+#: classes/class-tags.php:142
+msgid "Tagged %1$s"
+msgstr ""
+
+#: classes/class-tags.php:176
+msgid "By"
+msgstr ""
+
+#: classes/class-theme-setup.php:19
+msgid "Social Menu"
+msgstr ""
+
+#: classes/class-theme-setup.php:121
+msgid "Primary"
+msgstr ""
+
+#: classes/class-theme-setup.php:126
+msgid "Secondary"
+msgstr ""
+
+#: classes/class-theme-setup.php:149
+msgid "Primary Sidebar"
+msgstr ""
+
+#: classes/class-theme-setup.php:150
+msgid "Add widgets here."
+msgstr ""
+
+#: classes/class-theme-setup.php:328
+msgid "Skip to the content"
+msgstr ""
+
+#: template-parts/content.php:18
+msgid "Continue reading"
+msgstr ""
+
+#: template-parts/content.php:28
+msgid "Page"
+msgstr ""
+
+#: template-parts/content.php:28
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/navigation.php:12
+msgid "Post"
+msgstr ""
+
+#: templates/left-sidebar.php:3
+msgid "Left Sidebar"
+msgstr ""

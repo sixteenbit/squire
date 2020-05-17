@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.site-footer {
+  padding: $global-padding;
+  font-size: rem-calc(12);
+
+  @include breakpoint(large up) {
+    margin-left: $main-nav-width;
+
+    .has-child-pages & {
+      margin-left: ($main-nav-width + $child-nav-width);
+    }
+  }
+}

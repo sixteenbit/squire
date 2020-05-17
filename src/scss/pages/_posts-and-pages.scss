@@ -1,0 +1,181 @@
+// -------------------------------------------------------------------------------------
+// This file contains all styles related to the posts and pages of the site/application.
+// -------------------------------------------------------------------------------------
+.custom-header,
+.single-featured-image-header {
+  margin-bottom: $global-margin;
+
+  @include breakpoint(large up) {
+    margin-left: $main-nav-width;
+
+    .has-child-pages & {
+      margin-left: ($main-nav-width + $child-nav-width);
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.sticky-post {
+  display: block;
+}
+
+.hentry {
+  margin: rem-calc(0 0 60);
+  word-wrap: break-word;
+}
+
+.entry-profile-pic {
+  margin-bottom: $global-margin;
+  font-size: rem-calc(13);
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: rem-calc(5);
+    border-radius: 100%;
+  }
+}
+
+.entry-header {
+  margin-bottom: rem-calc(20);
+
+  @include breakpoint(medium up) {
+    margin-bottom: rem-calc(80);
+  }
+
+  .entry-title {
+    & > a {
+      text-decoration: none;
+    }
+  }
+}
+
+.child-entry-header {
+  .entry-title {
+    position: relative;
+
+    & > a {
+      color: $header-color;
+
+      @include on-event() {
+        &::before {
+          @include vertical-center();
+          left: -24px;
+          content: '\f0c1';
+          font-family: 'Font Awesome 5 Pro';
+          font-size: rem-calc(16);
+        }
+      }
+    }
+  }
+}
+
+h1.entry-title {
+  font-size: rem-calc(38);
+  font-weight: 300;
+  letter-spacing: rem-calc(-0.5);
+}
+
+h2.entry-title {
+  font-size: rem-calc(32);
+  letter-spacing: rem-calc(-0.5);
+}
+
+.entry-meta {
+  @include clearfix();
+  font-size: rem-calc(13);
+
+  .entry-date {
+    float: left;
+    margin-right: $global-margin;
+    padding: rem-calc(5);
+    line-height: 1;
+  }
+
+  .post-categories {
+    @include menu-base();
+    @include menu-simple();
+    float: left;
+
+    & > li {
+      & > a {
+        padding: rem-calc(5);
+        background-color: $white-smoke;
+        color: $astronaut;
+      }
+    }
+  }
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1.5rem 0 0;
+
+  @include breakpoint(large up) {
+    ul,
+    ol {
+      margin-left: 0;
+    }
+  }
+
+  h2,
+  h3 {
+    padding-top: rem-calc(60);
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: rem-calc(28);
+  }
+
+  h3 {
+    font-size: rem-calc(21);
+  }
+
+  h4 {
+    padding-top: rem-calc(30);
+    font-size: rem-calc(18);
+    font-weight: 600;
+    text-transform: uppercase;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  @include breakpoint(medium up) {
+    font-size: rem-calc(18);
+    line-height: 1.8;
+  }
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5rem;
+}
+
+.edit-link {
+  display: block;
+  margin-top: $global-margin;
+
+  .post-edit-link {
+    @include button(
+      $background: $secondary-color,
+      $background-hover: scale-color($secondary-color, $lightness: -15%),
+      $color: $body-font-color
+    );
+    font-size: 0.6rem;
+  }
+}

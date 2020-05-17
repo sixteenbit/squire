@@ -1,0 +1,31 @@
+// -------------------------------------------------------------------------------
+// This file contains all styles related to the structure of the site/application.
+// -------------------------------------------------------------------------------
+.site {
+  position: relative;
+  height: 100%;
+
+  .site-content {
+    @include breakpoint(large up) {
+      margin-left: $main-nav-width;
+
+      .has-child-pages & {
+        margin-left: ($main-nav-width + $child-nav-width);
+      }
+    }
+  }
+
+  .content-area {
+    display: block;
+    max-width: rem-calc(960);
+    margin-right: auto;
+    margin-left: auto;
+    padding: $global-padding;
+  }
+
+  @include breakpoint(large up) {
+    .content-area {
+      padding: rem-calc(80);
+    }
+  }
+}

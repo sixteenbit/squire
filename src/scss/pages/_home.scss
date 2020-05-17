@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the blog.
+// -----------------------------------------------------------------------------
+.blog,
+.archive {
+  .content-area {
+    max-width: rem-calc(1440);
+  }
+
+  .hentry {
+    position: relative;
+    border-radius: $global-radius;
+  }
+
+  .entry-header {
+    margin-bottom: 0;
+    padding: $global-padding;
+    border-top-left-radius: $global-radius;
+    border-top-right-radius: $global-radius;
+    background-color: $secondary-color;
+  }
+
+  h2.entry-title {
+    font-size: rem-calc(24);
+  }
+
+  .entry-content,
+  .entry-footer {
+    @include clearfix();
+    padding: $global-padding;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .entry-content {
+    margin-top: 0;
+    border-right: 1px solid $secondary-color;
+    border-left: 1px solid $secondary-color;
+    font-size: rem-calc(14);
+    //margin-bottom: rem-calc(56);
+  }
+
+  .entry-footer {
+    border-bottom-right-radius: $global-radius;
+    border-bottom-left-radius: $global-radius;
+    background-color: $secondary-color;
+
+    .entry-meta {
+      float: right;
+    }
+  }
+
+  .entry-profile-pic {
+    float: left;
+    margin-bottom: 0;
+
+    .avatar {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

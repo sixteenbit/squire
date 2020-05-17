@@ -1,0 +1,41 @@
+.main-navigation {
+  display: none;
+
+  @include breakpoint(large up) {
+    display: block;
+  }
+
+  & > .menu {
+    & > li {
+      & > a {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .menu {
+    & > li {
+      & > a {
+        font-size: rem-calc(14);
+        color: $main-nav-color;
+
+        @include on-event() {
+          background-color: rgba($black, 0.2);
+        }
+      }
+
+      &.current_page_item,
+      &.current-menu-parent {
+        & > a {
+          background-color: rgba($black, 0.2);
+        }
+      }
+
+      &.current-menu-parent {
+        & > .submenu {
+          display: flex !important;
+        }
+      }
+    }
+  }
+}

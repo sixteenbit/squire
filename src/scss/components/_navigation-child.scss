@@ -1,0 +1,63 @@
+.child-navigation {
+  padding-top: $global-padding;
+  background-color: $child-nav-background;
+
+  @include breakpoint(large up) {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: $main-nav-width;
+    width: $child-nav-width;
+    padding: rem-calc(40 $global-padding 0);
+  }
+
+  .admin-bar & {
+    top: 32px;
+  }
+
+  .menu {
+    & > li {
+      & > a {
+        border-radius: $global-radius;
+        font-size: rem-calc(14);
+        line-height: 1.4;
+        color: $child-nav-color;
+
+        &:hover {
+          background-color: $child-nav-hover;
+        }
+      }
+
+      .is-active {
+        background-color: $child-nav-hover;
+        color: $navy-blue;
+      }
+
+      &.current_page_item,
+      &.current-menu-parent {
+        & > a {
+          background-color: $child-nav-hover;
+        }
+      }
+
+      &.current-menu-parent {
+        & > .submenu {
+          display: flex !important;
+        }
+      }
+    }
+
+    .menu-text {
+      font-size: rem-calc(12);
+      text-transform: uppercase;
+    }
+
+    .back-to-top {
+      & > a {
+        font-size: rem-calc(8);
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

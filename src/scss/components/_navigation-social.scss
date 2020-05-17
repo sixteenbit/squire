@@ -1,0 +1,84 @@
+.social-navigation {
+  .menu {
+    & > li {
+      & > a {
+        position: relative;
+        color: $main-nav-color;
+
+        @include on-event() {
+          color: $main-nav-hover;
+        }
+
+        &:before {
+          content: '\f0c1';
+          font-family: 'Font Awesome 5 Brands';
+          text-align: center;
+        }
+      }
+
+      a[href*='facebook.com']:before {
+        content: '\f09a';
+      }
+
+      a[href*='flickr.com']:before {
+        content: '\f16e';
+      }
+
+      a[href*='plus.google.com']:before {
+        content: '\f1a0';
+      }
+
+      a[href*='github.com']:before {
+        content: '\f09b';
+      }
+
+      a[href*='instagram.com']:before {
+        content: '\f16d';
+      }
+
+      a[href*='linkedin.com']:before {
+        content: '\f08c';
+      }
+
+      a[href*='pinterest.com']:before {
+        content: '\f0d2';
+      }
+
+      a[href*='slack.com']:before {
+        content: '\f198';
+      }
+
+      a[href*='tumblr.com']:before {
+        content: '\f173';
+      }
+
+      a[href*='twitter.com']:before {
+        content: '\f099';
+      }
+
+      a[href*='vimeo.com']:before {
+        content: '\f40a';
+      }
+
+      a[href*='wordpress.com']:before,
+      a[href*='wordpress.org']:before {
+        content: '\f19a';
+      }
+
+      a[href*='youtube.com']:before,
+      a[href*='youtu.be']:before {
+        content: '\f167';
+      }
+
+      a[href*='mailto:']:before,
+      a[href*='/contact/']:before,
+      a[href*='/contact-us/']:before {
+        content: '\10f0e0';
+      }
+
+      a[href$='/feed/']:before {
+        content: '\10f09e';
+      }
+    }
+  }
+}
