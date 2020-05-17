@@ -25,7 +25,6 @@ Squire is a minimalistic theme that can be used for documentation or just a simp
 - Beaver Builder support
 - Force Login option for closing off site during development
 
-
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
