@@ -5,7 +5,7 @@
 	$(document).foundation();
 
 	$(document).on('opened.zf.offcanvas', function () {
-		$("#site-search .search-input").focus();
+		$("#js-search .search-input").focus();
 	});
 
 	var backToTopSel = '.js-scroll-to-top', backtoTopActiveClass = 'active';

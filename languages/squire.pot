@@ -278,7 +278,7 @@ msgstr ""
 msgid "Add widgets here."
 msgstr ""
 
-#: classes/class-theme-setup.php:328
+#: classes/class-theme-setup.php:346
 msgid "Skip to the content"
 msgstr ""
 

@@ -164,6 +164,15 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 			// Stylesheets: register.
 
 			wp_register_style(
+				'squire-motion-ui',
+				get_theme_file_uri( 'assets/css/motion-ui.css' ),
+				array(),
+				SQ_THEME_VERSION
+			);
+
+			wp_style_add_data( 'squire-motion-ui', 'rtl', 'replace' );
+
+			wp_register_style(
 				'squire-fontawesome',
 				get_theme_file_uri( 'assets/css/fontawesome.css' ),
 				array(),
@@ -195,6 +204,14 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 			wp_style_add_data( 'squire-styles', 'rtl', 'replace' );
 
 			wp_register_script(
+				'squire-motion-ui-js',
+				SQ_THEME_URL . '/assets/js/motion-ui.js',
+				array(),
+				filemtime( SQ_THEME_DIR . '/src/js' ),
+				true
+			);
+
+			wp_register_script(
 				'squire-what-input-js',
 				SQ_THEME_URL . '/assets/js/what-input.js',
 				array(),
@@ -215,6 +232,7 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 				SQ_THEME_URL . '/assets/js/scripts.js',
 				array(
 					'jquery',
+					'squire-motion-ui-js',
 					'squire-what-input-js',
 					'squire-foundation-js',
 				),

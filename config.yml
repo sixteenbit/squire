@@ -11,6 +11,8 @@ PATHS:
     - "src/img/**/*"
 
   sass:
+    motionui:
+      - "node_modules/motion-ui/src"
     foundation:
       - "node_modules/foundation-sites/scss"
     fontawesome:
@@ -21,6 +23,7 @@ PATHS:
       - "node_modules/foundation-sites/dist/js/foundation.js"
 
     vendors:
+      - "node_modules/motion-ui/dist/motion-ui.js"
       - "node_modules/what-input/dist/what-input.js"
 
     fontawesome:

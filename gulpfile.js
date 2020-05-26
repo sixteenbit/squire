@@ -58,6 +58,23 @@ gulp.task('sass:editor', function () {
 		.pipe(gulp.dest('assets/css'));
 });
 
+gulp.task('sass:motionui', function () {
+	return gulp.src('src/scss/vendors/motion-ui/motion-ui.scss')
+		.pipe($.sourcemaps.init())
+		.pipe($.sass({
+			includePaths: PATHS.sass.motionui,
+			outputStyle: 'expanded'
+		})
+			.on('error', $.sass.logError))
+		.pipe($.autoprefixer())
+		.pipe($.if(PRODUCTION, $.cssnano()))
+		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+		.pipe(gulp.dest('assets/css'))
+		.pipe($.rtlcss())
+		.pipe(rename({ suffix: '-rtl' }))
+		.pipe(gulp.dest('assets/css'));
+});
+
 gulp.task('sass:foundation', function () {
 	return gulp.src('src/scss/vendors/foundation/foundation.scss')
 		.pipe($.sourcemaps.init())
@@ -100,7 +117,7 @@ gulp.task('copy:fonts', function () {
 });
 
 // Compiles Sass files into CSS
-gulp.task('styles', gulp.series('sass:style', 'sass:foundation', 'sass:editor', 'sass:fontawesome', 'copy:fonts'));
+gulp.task('styles', gulp.series('sass:style', 'sass:foundation', 'sass:editor', 'sass:motionui', 'sass:fontawesome', 'copy:fonts'));
 
 gulp.task('javascript:foundation', function () {
 	return gulp.src(PATHS.javascript.foundation)
