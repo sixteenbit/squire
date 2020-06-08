@@ -10,7 +10,7 @@ Squire Editor Styles
 @import 'vendors/foundation/foundation-components';
 
 body {
-  max-width: rem-calc(960);
+  width: rem-calc(960);
   margin-right: auto;
   margin-left: auto;
   padding: $global-padding;
