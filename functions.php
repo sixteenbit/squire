@@ -6,7 +6,7 @@
  */
 
 // Defines
-define( 'SQ_THEME_VERSION', '0.1.0' );
+define( 'SQ_THEME_VERSION', '0.2.0' );
 define( 'SQ_THEME_DIR', get_template_directory() );
 define( 'SQ_THEME_URL', get_template_directory_uri() );
 
@@ -73,7 +73,8 @@ if ( ! function_exists( 'squire_post_thumbnail' ) ) :
 		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 			<?php
 			the_post_thumbnail(
-				'post-thumbnail', array(
+				'post-thumbnail',
+				array(
 					'alt' => the_title_attribute( 'echo=0' ),
 				)
 			);
@@ -83,3 +84,14 @@ if ( ! function_exists( 'squire_post_thumbnail' ) ) :
 		<?php
 	}
 endif;
+
+
+function squire_featured_header() {
+	if ( ( is_single() || ( is_page() && ! squire_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
+		$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_queried_object_id() ), 'squire-featured-image' );
+		$image = $image[0];
+
+		echo '<div class="single-featured-image-header" style="background-image: url(' . esc_url( $image ) . ');">';
+		echo '</div><!-- .single-featured-image-header -->';
+	endif;
+}

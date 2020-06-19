@@ -9,53 +9,54 @@ Squire Editor Styles
 // 2. Vendors
 @import 'vendors/foundation/foundation-components';
 
-body {
-  max-width: rem-calc(960);
-  margin-right: auto;
-  margin-left: auto;
-  padding: $global-padding;
+.editor-styles-wrapper {
+  @include grid-column-gutter();
+  max-width: 100% !important; /* Override where editor-style.css is affecting this. */
   background-color: $body-background;
-  font-family: $body-font-family;
   color: $body-font-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-  @include breakpoint(large up) {
-    padding: rem-calc(80);
+  & > * {
+    font-family: $body-font-family;
+    font-size: inherit;
+    text-rendering: optimizeLegibility;
   }
 }
 
-.editor-styles-wrapper {
-  max-width: 100% !important; /* Override where editor-style.css is affecting this. */
+.wp-block {
+  max-width: rem-calc(1400);
 }
 
-.wp-block {
-  max-width: rem-calc(960);
+*[data-align="right"] .wp-block-edit,
+*[data-align="left"] .wp-block-edit {
+  max-width: 50%;
+}
+
+.editor-styles-wrapper p,
+.editor-styles-wrapper ol,
+.editor-styles-wrapper ul,
+.editor-styles-wrapper dl,
+.editor-styles-wrapper dt {
+  font-family: $body-font-family;
+  letter-spacing: normal;
+}
+
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block h1,
+.editor-styles-wrapper .wp-block h2,
+.editor-styles-wrapper .wp-block h3,
+.editor-styles-wrapper .wp-block h4,
+.editor-styles-wrapper .wp-block h5,
+.editor-styles-wrapper .wp-block h6,
+.editor-styles-wrapper .has-drop-cap:not(:focus)::first-letter,
+.editor-styles-wrapper cite,
+.editor-styles-wrapper figcaption,
+.editor-styles-wrapper .wp-caption-text {
+  font-family: $header-font-family;
 }
 
 /** === Base Typography === */
-
-// Typography resets
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
 
 // Paragraphs
 p {
@@ -231,8 +232,8 @@ blockquote {
 // Abbreviations
 abbr, abbr[title] {
   border-bottom: $abbr-underline;
-  cursor: help;
   text-decoration: none;
+  cursor: help;
 }
 
 // Figures
@@ -257,11 +258,8 @@ kbd {
 
 /** === Post Title === */
 
-.editor-post-title__block {
-  .editor-post-title__input {
-    font-family: $header-font-family;
-    font-size: rem-calc(38);
-    font-weight: 300;
-    letter-spacing: rem-calc(-0.5);
-  }
+.editor-post-title__block .editor-post-title__input,
+.editor-styles-wrapper .wp-block h1 {
+  font-size: rem-calc(50);
+  font-weight: 700;
 }

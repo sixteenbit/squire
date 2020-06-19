@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@fortawesome/fontawesome-pro@^5.13.0":
-  version "5.13.0"
-  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/5.13.0/fontawesome-pro-5.13.0.tgz#fde32ed4d9933c4c9b60b8a74a79c67eba58d984"
-  integrity sha512-97Su0vmIuCdxrklVbjTzY1i16nvyKaqFmFBgrTsgeCVmyIWXNydiS62jhKlkwH9sMb8Tw4wYQ+J1EKbRILowxw==
+"@fortawesome/fontawesome-pro@^5.13.1":
+  version "5.13.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/5.13.1/fontawesome-pro-5.13.1.tgz#75f3be0937656e89ebffa5f68d16fe4647d2f1ad"
+  integrity sha512-8ENkNq6N4FAaCL8zyi2tt2DuWn/TEFJb9mMU0k1IMRsrIh3eYhe8sQ2F1IDSVSUh9xej36MPzTwEQuBNPkQHdQ==
 
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
@@ -3972,7 +3972,7 @@ gulp-cheerio@1.0.0:
     plugin-error "^0.1.2"
     through2 "^0.6.3"
 
-gulp-cli@^2.0.1, gulp-cli@^2.2.0:
+gulp-cli@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/gulp-cli/-/gulp-cli-2.2.0.tgz#5533126eeb7fe415a7e3e84a297d334d5cf70ebc"
   integrity sha512-rGs3bVYHdyJpLqR0TUBnlcZ1O5O++Zs4bA0ajm+zr3WFCfiSLjGwoCBqFs18wzN+ZxahT9DkOK5nDf26iDsWjA==
@@ -3994,6 +3994,30 @@ gulp-cli@^2.0.1, gulp-cli@^2.2.0:
     replace-homedir "^1.0.0"
     semver-greatest-satisfied-range "^1.1.0"
     v8flags "^3.0.1"
+    yargs "^7.1.0"
+
+gulp-cli@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/gulp-cli/-/gulp-cli-2.3.0.tgz#ec0d380e29e52aa45e47977f0d32e18fd161122f"
+  integrity sha512-zzGBl5fHo0EKSXsHzjspp3y5CONegCm8ErO5Qh0UzFzk2y4tMvzLWhoDokADbarfZRL2pGpRp7yt6gfJX4ph7A==
+  dependencies:
+    ansi-colors "^1.0.1"
+    archy "^1.0.0"
+    array-sort "^1.0.0"
+    color-support "^1.1.3"
+    concat-stream "^1.6.0"
+    copy-props "^2.0.1"
+    fancy-log "^1.3.2"
+    gulplog "^1.0.0"
+    interpret "^1.4.0"
+    isobject "^3.0.1"
+    liftoff "^3.1.0"
+    matchdep "^2.0.0"
+    mute-stdout "^1.0.0"
+    pretty-hrtime "^1.0.0"
+    replace-homedir "^1.0.0"
+    semver-greatest-satisfied-range "^1.1.0"
+    v8flags "^3.2.0"
     yargs "^7.1.0"
 
 gulp-concat@^2.6.1:
@@ -4175,15 +4199,15 @@ gulp-util@^3.0.8:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp-wp-pot@^2.0.7:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/gulp-wp-pot/-/gulp-wp-pot-2.4.2.tgz#b20d278fafce815732192d683c1a385cd380d290"
-  integrity sha512-LjVT0wDSFu0bD+IjZF57BDoysQbyHj/3tDyLzN52+kH6TIG3Hf+CIYBxIeGdfUaJ0gnEVAHZYMDXJTtsVOjpsg==
+gulp-wp-pot@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/gulp-wp-pot/-/gulp-wp-pot-2.4.3.tgz#371640b5c98a538222aa8a6ca0dbd11e2802a676"
+  integrity sha512-1vbftC7VPZVxbsSYdJrnFkYj+ic858uitVAsu6vYd3mZ/5cxjq6lpVOkLAf3ZOQlwE5gxkqbwcIhyORLvlEhEQ==
   dependencies:
     plugin-error "^1.0.1"
     through2 "^3.0.1"
     vinyl "^2.2.0"
-    wp-pot "^1.9.2"
+    wp-pot "^1.9.3"
 
 gulp@^4.0.2:
   version "4.0.2"
@@ -4535,6 +4559,11 @@ interpret@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
+
+interpret@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.4.0.tgz#665ab8bc4da27a774a40584e812e3e0fa45b1a1e"
+  integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
 into-stream@^3.1.0:
   version "3.1.0"
@@ -4965,10 +4994,18 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.10.0, js-yaml@^3.13.1:
+js-yaml@^3.13.1:
   version "3.13.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.13.1.tgz#aff151b30bfdfa8e49e05da22e7415e9dfa37847"
   integrity sha512-YfbcO7jXDdyj0DGxYVSlSeQNHbD7XPWvrVWeVUujrQEoZzWJIRrCPoyk6kL6IAjAG2IolMK4T0hNUe0HOUs5Jw==
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
+js-yaml@^3.14.0:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.14.0.tgz#a7a34170f26a21bb162424d8adacb4113a69e482"
+  integrity sha512-/4IbIeHcD9VMHFqDR/gQ7EdZdLimOvW2DdcxFjdyyZ9NsbS+ccrXqVWDtab/lRl5AlUqmpBx8EhPaWR+OtY17A==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
@@ -6379,7 +6416,7 @@ performance-now@^2.1.0:
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
   integrity sha1-Ywn04OX6kT7BxpMHrjZLSzd8nns=
 
-php-parser@^3.0.0:
+php-parser@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/php-parser/-/php-parser-3.0.1.tgz#69ae957362717cfefbc58eb208d12e48dab2e809"
   integrity sha512-m6CBPHOoMkzEHoXG0rhEg/VegSNemUNQepHnYtrRgTAh8rsqoO65KqQ32KJ5xe2iplhO0jdwd1UJ9Ea0yHsgYQ==
@@ -8450,6 +8487,13 @@ v8flags@^3.0.1:
   dependencies:
     homedir-polyfill "^1.0.1"
 
+v8flags@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-3.2.0.tgz#b243e3b4dfd731fa774e7492128109a0fe66d656"
+  integrity sha512-mH8etigqMfiGWdeXpaaqGfs6BndypxusHHcv2qSHyZkGEznCd/qAXCWWRzeowtL54147cktFOC4P5y+kl8d8Jg==
+  dependencies:
+    homedir-polyfill "^1.0.1"
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -8541,10 +8585,10 @@ vinyl@^2.0.0, vinyl@^2.2.0:
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
 
-what-input@^5.2.9:
-  version "5.2.9"
-  resolved "https://registry.yarnpkg.com/what-input/-/what-input-5.2.9.tgz#e484628c00404d2ad5d747ac2f0fb22008f7757a"
-  integrity sha512-/tuM/4ngvfYB1QF3yekJsmFpIhkiHEDKCl/VYDikyHZVxoFn3U/lNgiNt7aqC8RerkoPUMxc9ihKsW9KwAx2Rg==
+what-input@^5.2.10:
+  version "5.2.10"
+  resolved "https://registry.yarnpkg.com/what-input/-/what-input-5.2.10.tgz#f79f5b65cf95d75e55e6d580bb0a6b98174cad4e"
+  integrity sha512-7AQoIMGq7uU8esmKniOtZG3A+pzlwgeyFpkS3f/yzRbxknSL68tvn5gjE6bZ4OMFxCPjpaBd2udUTqlZ0HwrXQ==
 
 whet.extend@~0.9.9:
   version "0.9.9"
@@ -8595,14 +8639,14 @@ wordwrap@0.0.2:
   resolved "https://registry.yarnpkg.com/wordwrap/-/wordwrap-0.0.2.tgz#b79669bb42ecb409f83d583cad52ca17eaa1643f"
   integrity sha1-t5Zpu0LstAn4PVg8rVLKF+qhZD8=
 
-wp-pot@^1.9.2:
-  version "1.9.2"
-  resolved "https://registry.yarnpkg.com/wp-pot/-/wp-pot-1.9.2.tgz#24fc33031a4b49eff491b406303996c10b345312"
-  integrity sha512-B4lKZfgo8mDrNDGm9fRXChzc3t/Isqm7Yu9QrdXzZw9JzS9Pqqf40DRpSQcwaGuGI6aIVt6om8LX207xw8VRng==
+wp-pot@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/wp-pot/-/wp-pot-1.9.3.tgz#3bd360086d8cb30015e0f42558705da093ac6bcd"
+  integrity sha512-PvWxTZpG9geOyon68wFPCk70D0pYrUxafRSEtB8gYoDnPKf86Tar9PnzS9x/IX62UGNKtT4zDFFIyQU1L9wyLA==
   dependencies:
     matched "^5.0.0"
     path-sort "^0.1.0"
-    php-parser "^3.0.0"
+    php-parser "^3.0.1"
 
 wrap-ansi@^2.0.0:
   version "2.1.0"
