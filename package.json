@@ -9,7 +9,7 @@
 		"postinstall": "gulp init"
 	},
 	"dependencies": {
-		"@fortawesome/fontawesome-pro": "^5.13.0",
+		"@fortawesome/fontawesome-pro": "^5.13.1",
 		"babel-env": "^2.4.1",
 		"browser-sync": "^2.23.6",
 		"foundation-sites": "^6.6.3",
