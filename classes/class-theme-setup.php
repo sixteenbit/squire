@@ -392,9 +392,9 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 
 		public static function custom_admin_footer() {
 			$text = sprintf(
-			/* translators: %s: https://webservices.ellucian.com/ */
-				__( 'Developed by <a href="%s">Ellucian Web Services</a>.' ),
-				__( 'https://webservices.ellucian.com/' )
+			/* translators: %s: https://sixteenbit.com/ */
+				__( 'Developed by <a href="%s">Sixteenbit</a>.' ),
+				__( 'https://sixteenbit.com/' )
 			);
 
 			echo '<span id="footer-thankyou">' . $text . '</span>';

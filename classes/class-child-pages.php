@@ -132,7 +132,7 @@ class SQ_Child_Pages {
 	 */
 	public static function redirect_child_pages() {
 		global $post;
-		$post_slug = $post->post_name;
+		$post_slug = $post ? $post->post_name : '';
 		if ( is_page() && $post->post_parent ) {
 			wp_redirect( get_permalink( $post->post_parent ) . '#' . $post_slug );
 		}

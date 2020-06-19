@@ -4,18 +4,20 @@
 .custom-header,
 .single-featured-image-header {
   margin-bottom: $global-margin;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-attachment: fixed;
+  background-size: 100%;
 
   @include breakpoint(large up) {
     margin-left: $main-nav-width;
+    background-position: ($main-nav-width / 2) 0;
 
     .has-child-pages & {
       margin-left: ($main-nav-width + $child-nav-width);
+      background-position: (($main-nav-width / 2 ) + $child-nav-width) 0;
     }
-  }
-
-  img {
-    width: 100%;
-    height: auto;
   }
 }
 

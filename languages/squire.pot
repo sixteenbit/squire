@@ -91,7 +91,7 @@ msgid_plural "We found %s results for your search."
 msgstr[0] ""
 msgstr[1] ""
 
-#: index.php:107
+#: index.php:105
 msgid "search again"
 msgstr ""
 

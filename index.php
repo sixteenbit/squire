@@ -70,7 +70,7 @@ get_header();
 			if ( have_posts() && ! is_singular() ) {
 				?>
 				<header class="page-header margin-bottom-2 padding-bottom-2">
-					<h1 class="page-title"><?php _e( 'Articles','squire' ); ?></h1>
+					<h1 class="page-title"><?php _e( 'Articles', 'squire' ); ?></h1>
 				</header>
 
 				<?php
@@ -87,9 +87,7 @@ get_header();
 				echo '</div>';
 
 
-			}
-
-			elseif ( have_posts() ) {
+			} elseif ( have_posts() ) {
 				while ( have_posts() ) {
 					the_post();
 

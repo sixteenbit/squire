@@ -35,14 +35,14 @@
 					<nav id="footer-navigation" class="footer-navigation" aria-label="<?php esc_html_e( 'Footer Menu', 'squire' ); ?>">
 						<?php
 						wp_nav_menu(
-								array(
-										'container'      => false,
-										'theme_location' => 'footer',
-										'menu_id'        => 'footer',
-										'menu_class'     => 'simple menu',
-										'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-										'depth'          => 1
-								)
+							array(
+								'container'      => false,
+								'theme_location' => 'footer',
+								'menu_id'        => 'footer',
+								'menu_class'     => 'simple menu',
+								'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+								'depth'          => 1,
+							)
 						);
 						?>
 					</nav><!-- #site-navigation -->
@@ -54,7 +54,7 @@
 	<?php do_action( 'squire_after_footer' ); ?>
 
 	<div class="scroll-to-top js-scroll-to-top">
-		<a href="#page" class="secondary button" data-smooth-scroll><i class="fa fa-angle-up" aria-hidden="true"></i><span class="show-for-sr"><?php echo esc_html__('Scroll to top', 'squire'); ?></span></a>
+		<a href="#page" class="secondary button" data-smooth-scroll><i class="fa fa-angle-up" aria-hidden="true"></i><span class="show-for-sr"><?php echo esc_html__( 'Scroll to top', 'squire' ); ?></span></a>
 	</div>
 </div><!-- #page -->
 

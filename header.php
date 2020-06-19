@@ -43,7 +43,7 @@
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title screen-reader-text"><?php bloginfo( 'name' ); ?></h1>
-			<?php
+				<?php
 			endif;
 			$squire_description = get_bloginfo( 'description', 'display' );
 			if ( $squire_description || is_customize_preview() ) :
@@ -64,14 +64,14 @@
 			<nav id="site-navigation" class="main-navigation animated" data-toggler=".is-visible fadeIn" aria-label="<?php esc_html_e( 'Primary Menu', 'squire' ); ?>">
 				<?php
 				wp_nav_menu(
-						array(
-								'container'      => false,
-								'theme_location' => 'primary',
-								'menu_id'        => 'primary',
-								'menu_class'     => 'vertical menu accordion-menu',
-								'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle>%3$s</ul>',
-								'walker'         => new SQ_Dropdown_Walker(),
-						)
+					array(
+						'container'      => false,
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary',
+						'menu_class'     => 'vertical menu accordion-menu',
+						'items_wrap'     => '<ul id="%1$s" class="%2$s" data-accordion-menu data-submenu-toggle>%3$s</ul>',
+						'walker'         => new SQ_Dropdown_Walker(),
+					)
 				);
 				?>
 			</nav><!-- #site-navigation -->
@@ -81,14 +81,14 @@
 			<nav class="social-navigation show-for-medium" aria-label="<?php esc_html_e( 'Social Links Menu', 'squire' ); ?>">
 				<?php
 				wp_nav_menu(
-						array(
-								'container'      => false,
-								'theme_location' => 'social',
-								'menu_class'     => 'social-links-menu menu',
-								'depth'          => 1,
-								'link_before'    => '<span class="screen-reader-text">',
-								'link_after'     => '</span>',
-						)
+					array(
+						'container'      => false,
+						'theme_location' => 'social',
+						'menu_class'     => 'social-links-menu menu',
+						'depth'          => 1,
+						'link_before'    => '<span class="screen-reader-text">',
+						'link_after'     => '</span>',
+					)
 				);
 				?>
 			</nav><!-- .social-navigation -->
@@ -105,11 +105,7 @@
 	 * If a regular post or page, and not the front page, show the featured image.
 	 * Using get_queried_object_id() here since the $post global may not be set before a call to the_post().
 	 */
-	if ( ( is_single() || ( is_page() && ! squire_is_frontpage() ) ) && has_post_thumbnail( get_queried_object_id() ) ) :
-		echo '<div class="single-featured-image-header">';
-		echo get_the_post_thumbnail( get_queried_object_id(), 'squire-featured-image' );
-		echo '</div><!-- .single-featured-image-header -->';
-	endif;
+	squire_featured_header();
 	?>
 
 	<div id="content" class="site-content">
