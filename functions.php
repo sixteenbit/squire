@@ -6,7 +6,7 @@
  */
 
 // Defines
-define( 'SQ_THEME_VERSION', '0.2.0' );
+define( 'SQ_THEME_VERSION', '0.2.1' );
 define( 'SQ_THEME_DIR', get_template_directory() );
 define( 'SQ_THEME_URL', get_template_directory_uri() );
 
@@ -21,14 +21,9 @@ require_once 'classes/class-customizer.php';
 require_once 'classes/class-tags.php';
 require_once 'classes/class-dropdown-walker.php';
 require_once 'classes/class-child-pages.php';
-require_once 'classes/class-tgm-plugin-activation.php';
 
 if ( ! function_exists( 'v_forcelogin' ) ) {
 	require_once 'classes/class-force-login.php';
-}
-
-if ( class_exists( 'FLThemeBuilderLoader' ) ) {
-	require_once 'classes/class-bb-themer-setup.php';
 }
 
 // Theme actions

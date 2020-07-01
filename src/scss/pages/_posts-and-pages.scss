@@ -4,13 +4,14 @@
 .custom-header,
 .single-featured-image-header {
   margin-bottom: $global-margin;
-  height: 100vh;
+  height: 300px;
   background-repeat: no-repeat;
   background-position: 0 0;
   background-attachment: fixed;
   background-size: 100%;
 
   @include breakpoint(large up) {
+    height: 100vh;
     margin-left: $main-nav-width;
     background-position: ($main-nav-width / 2) 0;
 

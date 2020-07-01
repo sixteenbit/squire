@@ -132,11 +132,6 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 
 			// Add theme support for selective refresh for widgets.
 			add_theme_support( 'customize-selective-refresh-widgets' );
-
-			// Beaver Themer compatibility.
-			add_theme_support( 'fl-theme-builder-headers' );
-			add_theme_support( 'fl-theme-builder-footers' );
-			add_theme_support( 'fl-theme-builder-parts' );
 		}
 
 		/**
@@ -392,9 +387,9 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 
 		public static function custom_admin_footer() {
 			$text = sprintf(
-			/* translators: %s: https://sixteenbit.com/ */
+			/* translators: %s: https://sixteenbit.com */
 				__( 'Developed by <a href="%s">Sixteenbit</a>.' ),
-				__( 'https://sixteenbit.com/' )
+				__( 'https://sixteenbit.com' )
 			);
 
 			echo '<span id="footer-thankyou">' . $text . '</span>';
@@ -425,76 +420,6 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 
 			return preg_replace( $regex['pattern'], $regex['replacement'], $title );
 
-		}
-
-		/**
-		 * Register the required plugins for this theme.
-		 *
-		 * In this example, we register five plugins:
-		 * - one included with the TGMPA library
-		 * - two from an external source, one from an arbitrary source, one from a GitHub repository
-		 * - two from the .org repo, where one demonstrates the use of the `is_callable` argument
-		 *
-		 * The variables passed to the `tgmpa()` function should be:
-		 * - an array of plugin arrays;
-		 * - optionally a configuration array.
-		 * If you are not changing anything in the configuration array, you can remove the array and remove the
-		 * variable from the function call: `tgmpa( $plugins );`.
-		 * In that case, the TGMPA default settings will be used.
-		 *
-		 * This function is hooked into `tgmpa_register`, which is fired on the WP `init` action on priority 10.
-		 */
-		public static function register_required_plugins() {
-			/*
-			 * Array of plugin arrays. Required keys are name and slug.
-			 * If the source is NOT from the .org repo, then source is also required.
-			 */
-			$plugins = array(
-
-				// This is an example of how to include a plugin from the WordPress Plugin Repository.
-				array(
-					'name'     => 'WP-PageNavi',
-					'slug'     => 'wp-pagenavi',
-					'required' => false,
-				),
-
-				array(
-					'name'     => 'Nested Pages',
-					'slug'     => 'wp-nested-pages',
-					'required' => false,
-				),
-
-				array(
-					'name'     => 'Dave\'s WordPress Live Search',
-					'slug'     => 'daves-wordpress-live-search',
-					'required' => false,
-				),
-
-			);
-
-			/*
-			 * Array of configuration settings. Amend each line as needed.
-			 *
-			 * TGMPA will start providing localized text strings soon. If you already have translations of our standard
-			 * strings available, please help us make TGMPA even better by giving us access to these translations or by
-			 * sending in a pull-request with .po file(s) with the translations.
-			 *
-			 * Only uncomment the strings in the config array if you want to customize the strings.
-			 */
-			$config = array(
-				'id'           => 'squire',
-				'default_path' => '',
-				'menu'         => 'tgmpa-install-plugins',
-				'parent_slug'  => 'themes.php',
-				'capability'   => 'edit_theme_options',
-				'has_notices'  => true,
-				'dismissable'  => true,
-				'dismiss_msg'  => '',
-				'is_automatic' => false,
-				'message'      => '',
-			);
-
-			tgmpa( $plugins, $config );
 		}
 	}
 }
