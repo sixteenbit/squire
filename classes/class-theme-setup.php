@@ -64,6 +64,7 @@ if ( ! class_exists( 'SQ_Theme_Setup' ) ) {
 			// Set post thumbnail size.
 			set_post_thumbnail_size( 1200, 9999 );
 
+			add_image_size( 'squire-grid-image', 640, 320, true );
 			add_image_size( 'squire-featured-image', 1400, 9999 );
 
 			/*
