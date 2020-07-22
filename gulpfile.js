@@ -9,6 +9,7 @@ const yargs = require('yargs');
 const rimraf = require('rimraf');
 const rename = require('gulp-rename');
 const cssnano = require('gulp-cssnano');
+const zip = require('gulp-zip');
 
 // Check for --production flag
 const PRODUCTION = !!(yargs.argv.production);
@@ -38,7 +39,7 @@ gulp.task('sass:style', function () {
 		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
 		.pipe(gulp.dest('./'))
 		.pipe($.rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
+		.pipe(rename({suffix: '-rtl'}))
 		.pipe(gulp.dest('./'));
 });
 
@@ -54,24 +55,7 @@ gulp.task('sass:editor', function () {
 		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
 		.pipe(gulp.dest('assets/css'))
 		.pipe($.rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
-		.pipe(gulp.dest('assets/css'));
-});
-
-gulp.task('sass:motionui', function () {
-	return gulp.src('src/scss/vendors/motion-ui/motion-ui.scss')
-		.pipe($.sourcemaps.init())
-		.pipe($.sass({
-			includePaths: PATHS.sass.motionui,
-			outputStyle: 'expanded'
-		})
-			.on('error', $.sass.logError))
-		.pipe($.autoprefixer())
-		.pipe($.if(PRODUCTION, $.cssnano()))
-		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-		.pipe(gulp.dest('assets/css'))
-		.pipe($.rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
+		.pipe(rename({suffix: '-rtl'}))
 		.pipe(gulp.dest('assets/css'));
 });
 
@@ -88,14 +72,30 @@ gulp.task('sass:foundation', function () {
 		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
 		.pipe(gulp.dest('assets/css'))
 		.pipe($.rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
+		.pipe(rename({suffix: '-rtl'}))
+		.pipe(gulp.dest('assets/css'));
+});
+
+gulp.task('sass:motionui', function () {
+	return gulp.src('src/scss/vendors/motion-ui/motion-ui.scss')
+		.pipe($.sourcemaps.init())
+		.pipe($.sass({
+			includePaths: PATHS.sass.motionui,
+			outputStyle: 'expanded'
+		})
+			.on('error', $.sass.logError))
+		.pipe($.autoprefixer())
+		.pipe($.if(PRODUCTION, $.cssnano()))
+		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
+		.pipe(gulp.dest('assets/css'))
+		.pipe($.rtlcss())
+		.pipe(rename({suffix: '-rtl'}))
 		.pipe(gulp.dest('assets/css'));
 });
 
 gulp.task('sass:fontawesome', function () {
 	return gulp.src('src/scss/vendors/fontawesome/fontawesome.scss')
 		.pipe($.sourcemaps.init())
-		.pipe($.plumber())
 		.pipe($.sass({
 			includePaths: PATHS.sass.fontawesome,
 			outputStyle: 'expanded'
@@ -106,7 +106,7 @@ gulp.task('sass:fontawesome', function () {
 		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
 		.pipe(gulp.dest('assets/css'))
 		.pipe($.rtlcss())
-		.pipe(rename({ suffix: '-rtl' }))
+		.pipe(rename({suffix: '-rtl'}))
 		.pipe(gulp.dest('assets/css'));
 });
 
@@ -118,16 +118,6 @@ gulp.task('copy:fonts', function () {
 
 // Compiles Sass files into CSS
 gulp.task('styles', gulp.series('sass:style', 'sass:foundation', 'sass:editor', 'sass:motionui', 'sass:fontawesome', 'copy:fonts'));
-
-gulp.task('javascript:foundation', function () {
-	return gulp.src(PATHS.javascript.foundation)
-		.pipe($.sourcemaps.init())
-		.pipe($.concat('foundation.js'))
-		.pipe(gulp.dest('assets/js'))
-		.pipe($.if(PRODUCTION, $.uglify({'mangle': false})))
-		.pipe($.if(!PRODUCTION, $.sourcemaps.write()))
-		.pipe(gulp.dest('assets/js'))
-});
 
 gulp.task('javascript:vendors', function () {
 	return gulp.src(PATHS.javascript.vendors)
@@ -148,7 +138,7 @@ gulp.task('javascript:custom', function () {
 });
 
 // Compiles JavaScript into a single file
-gulp.task('javascript', gulp.series('javascript:foundation', 'javascript:vendors', 'javascript:custom'));
+gulp.task('javascript', gulp.series('javascript:vendors', 'javascript:custom'));
 
 // Scan the theme and create a POT file.
 function translate() {
@@ -166,6 +156,12 @@ gulp.task('images:optimize', function () {
 	return gulp.src(PATHS.images)
 		.pipe($.imagemin())
 		.pipe(gulp.dest('assets/img'))
+});
+
+gulp.task('release:zip', function () {
+	return gulp.src('release/**')
+		.pipe(zip(THEME.CURRENT.slug + '.zip'))
+		.pipe(gulp.dest('release'))
 });
 
 gulp.task('copy:dist', function () {
@@ -188,7 +184,7 @@ gulp.task('copy:dist', function () {
 
 // Replaces all theme specific names with new ones
 gulp.task('rename:theme', function () {
-	return gulp.src(['**/*', '!node_modules/**', '!config.yml'])
+	return gulp.src(['**/*', '!node_modules/**'])
 		.pipe($.replace(THEME.CURRENT.name, THEME.NEW.name))
 		.pipe($.replace(THEME.CURRENT.slug, THEME.NEW.slug))
 		.pipe($.replace(THEME.CURRENT.prefix, THEME.NEW.prefix))
@@ -222,7 +218,7 @@ gulp.task('watch', gulp.series(clean, 'build', watch));
 gulp.task('server', gulp.series('build', server, watch));
 
 // Build project and copy to clean directory
-gulp.task('release', gulp.series(clean, 'build', 'copy:dist'));
+gulp.task('release', gulp.series(clean, 'build', 'copy:dist', 'release:zip'));
 
 // Clean directory and build the assets
 gulp.task('default', gulp.series(clean, 'build'));

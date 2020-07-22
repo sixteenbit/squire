@@ -43,6 +43,13 @@ add_filter( 'get_the_archive_title', 'SQ_Theme_Setup::get_the_archive_title' );
 add_action( 'tgmpa_register', 'SQ_Theme_Setup::register_required_plugins' );
 add_action( 'template_redirect', 'SQ_Child_Pages::redirect_child_pages' );
 
+require 'update-checker/plugin-update-checker.php';
+$NTUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+		'https://updates.sixteenbit.com/updates/?action=get_metadata&slug=squire',
+		__FILE__,
+		'squire'
+);
+
 /**
  * Checks to see if we're on the homepage or not.
  */
