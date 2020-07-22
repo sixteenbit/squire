@@ -254,23 +254,23 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: classes/class-theme-setup.php:121
+#: classes/class-theme-setup.php:122
 msgid "Primary"
 msgstr ""
 
-#: classes/class-theme-setup.php:126
+#: classes/class-theme-setup.php:127
 msgid "Secondary"
 msgstr ""
 
-#: classes/class-theme-setup.php:144
+#: classes/class-theme-setup.php:145
 msgid "Primary Sidebar"
 msgstr ""
 
-#: classes/class-theme-setup.php:145
+#: classes/class-theme-setup.php:146
 msgid "Add widgets here."
 msgstr ""
 
-#: classes/class-theme-setup.php:341
+#: classes/class-theme-setup.php:342
 msgid "Skip to the content"
 msgstr ""
 

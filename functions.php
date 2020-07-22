@@ -6,7 +6,7 @@
  */
 
 // Defines
-define( 'SQ_THEME_VERSION', '0.2.1' );
+define( 'SQ_THEME_VERSION', '0.2.2' );
 define( 'SQ_THEME_DIR', get_template_directory() );
 define( 'SQ_THEME_URL', get_template_directory_uri() );
 
@@ -45,9 +45,9 @@ add_action( 'template_redirect', 'SQ_Child_Pages::redirect_child_pages' );
 
 require 'update-checker/plugin-update-checker.php';
 $NTUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-		'https://updates.sixteenbit.com/updates/?action=get_metadata&slug=squire',
-		__FILE__,
-		'squire'
+	'https://updates.sixteenbit.com/updates/?action=get_metadata&slug=squire',
+	__FILE__,
+	'squire'
 );
 
 /**
