@@ -4,7 +4,7 @@ Theme URI: https://github.com/sixteenbit/squire
 Author: Sixteenbit
 Author URI: https://sixteenbit.com
 Description: Custom theme: Squire, developed by Sixteenbit.
-Version: 0.2.0
+Version: 0.2.2
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: squire
@@ -15,7 +15,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 // 1. Configuration and helpers
-@import 'abstracts/functions';
 @import 'abstracts/mixins';
 
 // 2. Vendors
@@ -36,13 +35,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import 'components/navigation-child';
 @import 'components/navigation-social';
 @import 'components/alignments';
-@import 'components/captions';
 @import 'components/comments';
 @import 'components/media';
 @import 'components/search';
 @import 'components/page-navi';
 @import 'components/scroll-to-top';
-@import 'components/beaver-builder';
 @import 'components/fouc';
 @import 'components/admin-bar';
 

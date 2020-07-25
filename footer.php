@@ -14,16 +14,8 @@
 	<?php
 	do_action( 'squire_after_content' );
 	do_action( 'squire_before_footer' );
-
-	if (
-		is_callable( 'FLThemeBuilderLayoutData::get_current_page_footer_ids' )
-		&& ! empty( FLThemeBuilderLayoutData::get_current_page_footer_ids() )
-		&& is_callable( 'FLThemeBuilderLayoutRenderer::render_footer' )
-	) {
-		FLThemeBuilderLayoutRenderer::render_footer();
-	} else {
-		?>
-		<footer id="colophon" class="site-footer padding-vertical-3">
+	?>
+	<footer id="colophon" class="site-footer padding-vertical-3">
 			<div class="grid-container">
 				<div class="site-info">
 					<p class="copyright">
@@ -49,7 +41,6 @@
 				<?php endif; ?>
 			</div>
 		</footer><!-- #colophon -->
-	<?php } ?>
 
 	<?php do_action( 'squire_after_footer' ); ?>
 

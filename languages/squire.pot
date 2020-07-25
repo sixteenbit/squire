@@ -41,15 +41,15 @@ msgstr ""
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:30
+#: footer.php:22
 msgid "Copyright &copy; %s. All rights reserved."
 msgstr ""
 
-#: footer.php:35, classes/class-theme-setup.php:20
+#: footer.php:27, classes/class-theme-setup.php:20
 msgid "Footer Menu"
 msgstr ""
 
-#: footer.php:57
+#: footer.php:48
 msgid "Scroll to top"
 msgstr ""
 
@@ -107,14 +107,6 @@ msgstr ""
 #: searchform.php:23
 msgctxt "submit button"
 msgid "Search"
-msgstr ""
-
-#: classes/class-bb-themer-setup.php:24
-msgid "Content area"
-msgstr ""
-
-#: classes/class-bb-themer-setup.php:32
-msgid "Footer area"
 msgstr ""
 
 #: classes/class-child-pages.php:19
@@ -262,23 +254,23 @@ msgstr ""
 msgid "Social Menu"
 msgstr ""
 
-#: classes/class-theme-setup.php:121
+#: classes/class-theme-setup.php:122
 msgid "Primary"
 msgstr ""
 
-#: classes/class-theme-setup.php:126
+#: classes/class-theme-setup.php:127
 msgid "Secondary"
 msgstr ""
 
-#: classes/class-theme-setup.php:149
+#: classes/class-theme-setup.php:145
 msgid "Primary Sidebar"
 msgstr ""
 
-#: classes/class-theme-setup.php:150
+#: classes/class-theme-setup.php:146
 msgid "Add widgets here."
 msgstr ""
 
-#: classes/class-theme-setup.php:346
+#: classes/class-theme-setup.php:342
 msgid "Skip to the content"
 msgstr ""
 

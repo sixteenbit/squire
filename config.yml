@@ -1,40 +1,30 @@
 # Your project's server will run on localhost:xxxx at this port
-URL: "https://sixteenbit.local/squire"
+URL: "https://sixteenbit.ddev.site"
 
 # Gulp will reference these paths when it copies files
 PATHS:
   php:
     - "./*.php"
     - "./**/*.php"
-
   images:
     - "src/img/**/*"
-
   sass:
     motionui:
       - "node_modules/motion-ui/src"
     foundation:
       - "node_modules/foundation-sites/scss"
     fontawesome:
-      - "node_modules/@fortawesome/fontawesome-pro/scss"
-
+      - "node_modules/@fortawesome/fontawesome-free/scss"
   javascript:
-    foundation:
-      - "node_modules/foundation-sites/dist/js/foundation.js"
-
     vendors:
       - "node_modules/motion-ui/dist/motion-ui.js"
       - "node_modules/what-input/dist/what-input.js"
-
-    fontawesome:
-      - "node_modules/@fortawesome/fontawesome-pro/webfonts/*"
-
+      - "node_modules/foundation-sites/dist/js/foundation.js"
     custom:
       - "src/js/**/_*.js"
-
   fonts:
     fontawesome:
-      - "node_modules/@fortawesome/fontawesome-pro/webfonts/*"
+      - "node_modules/@fortawesome/fontawesome-free/webfonts/*"
 
 # Used in the theme .pot file for translation
 POT:

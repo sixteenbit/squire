@@ -1,8 +1,8 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-$header-anchor-color: $glitter;
-$header-anchor-hover: $white;
+$header-anchor-color: $glitter !default;
+$header-anchor-hover: $white !default;
 
 .site-header {
   @include clearfix();

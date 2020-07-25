@@ -14,12 +14,23 @@ object {
   max-width: 100%;
 }
 
-/* Make sure logo link wraps around logo image. */
-.custom-logo-link {
-  display: inline-block;
+.wp-caption {
+  max-width: 100%;
+  margin-bottom: $global-margin;
+
+  img[class*="wp-image-"] {
+    display: block;
+    clear: both;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
 }
 
-/*--------------------------------------------------------------
-## Captions
---------------------------------------------------------------*/
-@import 'captions';
+.wp-caption-text {
+  text-align: center;
+}
+
