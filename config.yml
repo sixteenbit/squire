@@ -14,7 +14,7 @@ PATHS:
     foundation:
       - "node_modules/foundation-sites/scss"
     fontawesome:
-      - "node_modules/@fortawesome/fontawesome-pro/scss"
+      - "node_modules/@fortawesome/fontawesome-free/scss"
   javascript:
     vendors:
       - "node_modules/motion-ui/dist/motion-ui.js"
@@ -24,7 +24,7 @@ PATHS:
       - "src/js/**/_*.js"
   fonts:
     fontawesome:
-      - "node_modules/@fortawesome/fontawesome-pro/webfonts/*"
+      - "node_modules/@fortawesome/fontawesome-free/webfonts/*"
 
 # Used in the theme .pot file for translation
 POT:

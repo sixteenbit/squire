@@ -9,7 +9,7 @@
 	"postinstall": "gulp init"
   },
   "dependencies": {
-	"@fortawesome/fontawesome-pro": "^5.13.0",
+	"@fortawesome/fontawesome-free": "^5.13.0",
 	"browser-sync": "^2.23.6",
 	"clean-css": "^4.1.11",
 	"foundation-sites": "^6.6.3",
