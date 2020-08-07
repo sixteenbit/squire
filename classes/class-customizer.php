@@ -189,27 +189,27 @@ if ( ! class_exists( 'SQ_Customizer' ) ) {
 
 		public static function customize_css() {
 
-			$text_color         = get_theme_mod( 'text_color', '#172b4d' );
-			$sidebar_background = get_theme_mod( 'sidebar_background', '#084ca3' );
-			$sidebar_color      = get_theme_mod( 'sidebar_color', '#deebff' );
-			$anchor_color       = get_theme_mod( 'anchor_color', '#0052cc' );
-			$anchor_hover_color = get_theme_mod( 'anchor_hover_color', '#0065ff' );
+			$text_color         = get_theme_mod( 'text_color' );
+			$sidebar_background = get_theme_mod( 'sidebar_background' );
+			$sidebar_color      = get_theme_mod( 'sidebar_color' );
+			$anchor_color       = get_theme_mod( 'anchor_color' );
+			$anchor_hover_color = get_theme_mod( 'anchor_hover_color' );
 			?>
 			<style id="customizer-styles" type="text/css">
-				<?php if ( isset( $text_color ) ) : ?>
+				<?php if ( ! empty( $text_color ) ) : ?>
 				body {
 					color: <?php echo $text_color; ?>;
 				}
 
 				<?php endif; ?>
-				<?php if ( isset( $sidebar_background ) ) : ?>
+				<?php if ( ! empty( $sidebar_background ) ) : ?>
 				.site-header {
 					background-color: <?php echo $sidebar_background; ?>;
 				}
 
 				<?php endif; ?>
 
-				<?php if ( isset( $sidebar_color ) ) : ?>
+				<?php if ( ! empty( $sidebar_color ) ) : ?>
 				.site-header,
 				.site-header a,
 				.site-header .menu-toggle,
@@ -224,7 +224,7 @@ if ( ! class_exists( 'SQ_Customizer' ) ) {
 
 				<?php endif; ?>
 
-				<?php if ( isset( $anchor_color ) ) : ?>
+				<?php if ( ! empty( $anchor_color ) ) : ?>
 				a,
 				.button.hollow,
 				.button.hollow.disabled,
@@ -299,7 +299,7 @@ if ( ! class_exists( 'SQ_Customizer' ) ) {
 
 				<?php endif; ?>
 
-				<?php if ( isset( $anchor_hover_color ) ) : ?>
+				<?php if ( ! empty( $anchor_hover_color ) ) : ?>
 				a:hover,
 				a:focus,
 				.social-navigation .menu > li > a:hover,
