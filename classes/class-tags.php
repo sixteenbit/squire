@@ -89,11 +89,11 @@ if ( ! class_exists( 'SQ_Tags' ) ) {
 
 			$firstpage = esc_attr( get_pagenum_link( 1 ) );
 			if ( $firstpage && ( 1 != $page ) ) {
-				$echo .= '<li><a href="' . $firstpage . '"><span class="show-for-sr">' . __( 'First', 'squire' ) . '</span><i class="fal fa-angle-double-left"></i></a></li>';
+				$echo .= '<li><a href="' . $firstpage . '"><span class="show-for-sr">' . __( 'First', 'squire' ) . '</span><i class="fas fa-angle-double-left"></i></a></li>';
 			}
 
 			if ( $previous && ( 1 != $page ) ) {
-				$echo .= '<li><a href="' . $previous . '" title="' . __( 'previous', 'squire' ) . '"><span class="show-for-sr">' . $args['previous_string'] . '</span><i class="fal fa-angle-left"></i></a></li>';
+				$echo .= '<li><a href="' . $previous . '" title="' . __( 'previous', 'squire' ) . '"><span class="show-for-sr">' . $args['previous_string'] . '</span><i class="fas fa-angle-left"></i></a></li>';
 			}
 
 			if ( ! empty( $min ) && ! empty( $max ) ) {
@@ -109,12 +109,12 @@ if ( ! class_exists( 'SQ_Tags' ) ) {
 			$next = intval( $page ) + 1;
 			$next = esc_attr( get_pagenum_link( $next ) );
 			if ( $next && ( $count != $page ) ) {
-				$echo .= '<li><a href="' . $next . '" title="' . __( 'next', 'squire' ) . '"><span class="show-for-sr">' . $args['next_string'] . '</span><i class="fal fa-angle-right"></i></a></li>';
+				$echo .= '<li><a href="' . $next . '" title="' . __( 'next', 'squire' ) . '"><span class="show-for-sr">' . $args['next_string'] . '</span><i class="fas fa-angle-right"></i></a></li>';
 			}
 
 			$lastpage = esc_attr( get_pagenum_link( $count ) );
 			if ( $lastpage ) {
-				$echo .= '<li><a href="' . $lastpage . '"><span class="show-for-sr">' . __( 'Last', 'squire' ) . '</span><i class="fal fa-angle-double-right"></i></a></li>';
+				$echo .= '<li><a href="' . $lastpage . '"><span class="show-for-sr">' . __( 'Last', 'squire' ) . '</span><i class="fas fa-angle-double-right"></i></a></li>';
 			}
 
 			if ( isset( $echo ) ) {

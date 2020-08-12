@@ -19,7 +19,7 @@ get_header();
 				<div class="page-content">
 					<h3 class="subheader"><?php esc_html_e( 'The page you are looking for does not exist. It may have been moved, or removed altogether. Perhaps you can return back to the site\'s homepage and see if you can find what you are looking for.', 'squire' ); ?></h3>
 
-					<a class="secondary button" href="<?php echo site_url(); ?>"><i class="fal fa-long-arrow-left"></i> <?php esc_html_e( 'Back Home', 'squire' ); ?></a>
+					<a class="secondary button" href="<?php echo site_url(); ?>"><i class="fas fa-long-arrow-left"></i> <?php esc_html_e( 'Back Home', 'squire' ); ?></a>
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
