@@ -6,7 +6,7 @@
  */
 
 // Defines
-define( 'SQ_THEME_VERSION', '0.2.2' );
+define( 'SQ_THEME_VERSION', '0.2.3' );
 define( 'SQ_THEME_DIR', get_template_directory() );
 define( 'SQ_THEME_URL', get_template_directory_uri() );
 
