@@ -18,10 +18,10 @@
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
 		the_post_thumbnail(
-				'squire-grid-image',
-				array(
-						'alt' => the_title_attribute( 'echo=0' ),
-				)
+			'squire-grid-image',
+			array(
+				'alt' => the_title_attribute( 'echo=0' ),
+			)
 		);
 		?>
 	</a>
