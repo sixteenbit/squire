@@ -6,9 +6,16 @@
  */
 
 // Defines
-define( 'SQ_THEME_VERSION', '0.2.3' );
+define( 'SQ_THEME_VERSION', '0.3.0' );
 define( 'SQ_THEME_DIR', get_template_directory() );
 define( 'SQ_THEME_URL', get_template_directory_uri() );
+
+require 'update-checker/plugin-update-checker.php';
+$NTUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+  'https://wordpress.sixteenbit.dev/updates/?action=get_metadata&slug=squire',
+  __FILE__,
+  'squire'
+);
 
 /**
  * REQUIRED FILES
@@ -42,13 +49,6 @@ add_filter( 'admin_footer_text', 'SQ_Theme_Setup::custom_admin_footer' );
 add_filter( 'get_the_archive_title', 'SQ_Theme_Setup::get_the_archive_title' );
 add_action( 'tgmpa_register', 'SQ_Theme_Setup::register_required_plugins' );
 add_action( 'template_redirect', 'SQ_Child_Pages::redirect_child_pages' );
-
-require 'update-checker/plugin-update-checker.php';
-$NTUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://updates.sixteenbit.com/updates/?action=get_metadata&slug=squire',
-	__FILE__,
-	'squire'
-);
 
 /**
  * Checks to see if we're on the homepage or not.
