@@ -20,7 +20,7 @@ if ( $next_post || $prev_post ) {
 				?>
 
 				<a class="previous-post button hollow" href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>">
-					<i class="fal fa-arrow-left"></i> <?php echo wp_kses_post( get_the_title( $prev_post->ID ) ); ?>
+					<i class="fas fa-arrow-left"></i> <?php echo wp_kses_post( get_the_title( $prev_post->ID ) ); ?>
 				</a>
 
 				<?php
@@ -30,7 +30,7 @@ if ( $next_post || $prev_post ) {
 				?>
 
 				<a class="next-post button hollow" href="<?php echo esc_url( get_permalink( $next_post->ID ) ); ?>">
-					<?php echo wp_kses_post( get_the_title( $next_post->ID ) ); ?> <i class="fal fa-arrow-right"></i>
+					<?php echo wp_kses_post( get_the_title( $next_post->ID ) ); ?> <i class="fas fa-arrow-right"></i>
 				</a>
 				<?php
 			}
